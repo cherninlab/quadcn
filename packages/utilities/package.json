@@ -1,0 +1,29 @@
+{
+  "name": "@quadcn/utilities",
+  "version": "0.1.0",
+  "description": "Utility functions for the QuadCn 4px grid system",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@quadcn/core": "workspace:*"
+  },
+  "devDependencies": {}
+}

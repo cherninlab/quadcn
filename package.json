@@ -1,0 +1,29 @@
+{
+  "name": "quadcn",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Precision-focused 4px grid system for pixel-perfect UIs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organization/quadcn.git"
+  },
+  "packageManager": "pnpm@9.14.2",
+  "type": "module",
+  "scripts": {
+    "build:core": "pnpm run --filter core build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1",
+    "@types/node": "^22.13.11",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.23.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "type-fest": "^4.37.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}

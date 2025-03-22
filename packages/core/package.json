@@ -1,0 +1,44 @@
+{
+  "name": "@quadcn/core",
+  "version": "0.1.0",
+  "description": "Core tokens and utilities for the QuadCn 4px grid system",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./css": {
+      "import": "./dist/css/index.css",
+      "require": "./dist/css/index.css"
+    },
+    "./css/reset": {
+      "import": "./dist/css/reset.css",
+      "require": "./dist/css/reset.css"
+    },
+    "./css/variables": {
+      "import": "./dist/css/variables.css",
+      "require": "./dist/css/variables.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  }
+}

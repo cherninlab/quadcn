@@ -5,23 +5,40 @@
   "description": "Precision-focused 4px grid system for pixel-perfect UIs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/organization/quadcn.git"
+    "url": "https://github.com/cherninlab/quadcn.git"
   },
   "packageManager": "pnpm@9.14.2",
   "type": "module",
   "scripts": {
-    "build:core": "pnpm run --filter core build"
+    "build": "pnpm run -r build",
+    "build:core": "pnpm run --filter @quadcn/core build",
+    "build:components": "pnpm run --filter @quadcn/components build",
+    "dev": "pnpm run -r dev",
+    "test:core": "pnpm run --filter @quadcn/core test",
+    "test:components": "pnpm run --filter @quadcn/components test",
+    "test": "pnpm run build:core && pnpm run test:core && pnpm run build:components && pnpm run test:components",
+    "lint": "pnpm run -r lint",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish",
+    "prepare": "lefthook install"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@changesets/cli": "^2.28.1",
     "@types/node": "^22.13.11",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
-    "eslint": "^9.23.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "@vitest/coverage-v8": "^3.0.9",
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
+    "jsdom": "^26.0.0",
+    "lefthook": "^1.11.3",
+    "path": "^0.12.7",
     "prettier": "^3.5.3",
+    "tsconfig-paths": "^4.2.0",
     "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
     "type-fest": "^4.37.0",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"

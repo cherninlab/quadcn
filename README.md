@@ -9,9 +9,9 @@
 
 ## The Mathematical Foundation
 
-QuadCn is built on a single, non-negotiable principle: **every measurement must be a multiple of 4px**.
+quadcn is built on a single, non-negotiable principle: **every measurement must be a multiple of 4px**.
 
-## Why Choose QuadCn
+## Why Choose quadcn
 
 - **Zero Runtime Dependencies**: No external bloat
 - **Framework Agnostic**: Works with any framework
@@ -22,10 +22,10 @@ QuadCn is built on a single, non-negotiable principle: **every measurement must 
 
 ```bash
 # Install core package
-npm install @quadcn/core
+pnpm install @quadcn/core
 
 # Optional React components
-npm install @quadcn/components
+pnpm install @quadcn/components
 ```
 
 Three implementation options:
@@ -103,7 +103,7 @@ const Example = () => (
 
 ## Grid Verification
 
-QuadCn provides built-in tools to verify grid compliance:
+quadcn provides built-in tools to verify grid compliance:
 
 ```jsx
 // Toggle grid overlay to check alignment

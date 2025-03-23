@@ -6,7 +6,7 @@ export const GRID_UNIT = 4;
  * @returns Pixel value as string (e.g. "16px")
  */
 export function createGridValue(units: number): string {
-  return `${units * GRID_UNIT}px`;
+	return `${units * GRID_UNIT}px`;
 }
 
 /**
@@ -15,7 +15,7 @@ export function createGridValue(units: number): string {
  * @returns Whether the value is a multiple of the grid unit
  */
 export function isGridAligned(value: number): boolean {
-  return value % GRID_UNIT === 0;
+	return value % GRID_UNIT === 0;
 }
 
 /**
@@ -24,5 +24,5 @@ export function isGridAligned(value: number): boolean {
  * @returns Formatted pixel value
  */
 export function px(value: number): string {
-  return `${value}px`;
+	return `${value}px`;
 }

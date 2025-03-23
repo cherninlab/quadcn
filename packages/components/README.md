@@ -5,39 +5,78 @@ React components built on the QuadCn 4px grid system, ensuring pixel-perfect ali
 ## Installation
 
 ```bash
-npm install @quadcn/components @quadcn/core
+pnpm install @quadcn/components @quadcn/core
 ```
 
-## Getting Started
+## Development
+
+This package provides a set of React components built on top of the `@quadcn/core` package, leveraging its grid system, tokens, and utilities.
+
+### Getting Started
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development mode
+pnpm run dev
+```
+
+### Available Scripts
+
+- `pnpm run build` - Build the component library for production
+- `pnpm run dev` - Start development mode with watch
+- `pnpm run typecheck` - Check TypeScript types
+- `pnpm run lint` - Lint the codebase
+- `pnpm run prepublishOnly` - Run before publishing (automatically runs build)
+
+## Components Architecture
+
+Components are structured to properly use the core package, making use of:
+
+- Core tokens for spacing, borders, colors, etc.
+- Border compensation utilities for proper grid alignment
+- Theme system integration
+
+## Directory Structure
+
+```
+src/
+├── foundation/
+│   ├── Box.tsx          # Fundamental layout component
+│   ├── Stack.tsx        # Stacking layout component
+│   └── Text.tsx         # Typography component
+├── components/
+│   ├── Button.tsx       # Button component
+│   ├── Card.tsx         # Card component
+│   └── ...
+├── theme/
+│   ├── ThemeProvider.tsx # Theme provider component
+│   └── useTheme.ts      # Theme hook
+├── utils/
+│   └── classNames.ts    # Utility for combining class names
+└── index.ts             # Main exports
+```
+
+## Usage
 
 ```jsx
-import { Box, VStack, Text, Button } from "@quadcn/components";
-import "@quadcn/core/css/reset.css";
-import "@quadcn/core/css/variables.css";
+import { Box, Button, ThemeProvider, useTheme } from "@quadcn/components";
 
 function App() {
   return (
-    <Box
-      padding={6}
-      borderRadius="md"
-      borderWidth="hairline"
-      borderColor="default"
-    >
-      <VStack spacing={4}>
-        <Text variant="heading">Perfectly Aligned Components</Text>
-        <Text variant="body">
-          Every component adheres strictly to the 4px grid.
-        </Text>
+    <ThemeProvider theme="light">
+      <Box padding={4} borderRadius="md">
         <Button variant="primary" size="md">
-          Exactly 40px Height
+          Click me
         </Button>
-      </VStack>
-    </Box>
+      </Box>
+    </ThemeProvider>
   );
 }
 ```
 
-## Why QuadCn Components?
+## Why quadcn Components?
 
 Our components go beyond conventional design systems with an unwavering commitment to the 4px grid:
 
@@ -339,7 +378,7 @@ function ModalExample() {
 
 ## Theming System
 
-QuadCn uses a semantic color system that separates color usage from specific values. This makes it easy to create consistent interfaces and switch between themes.
+quadcn uses a semantic color system that separates color usage from specific values. This makes it easy to create consistent interfaces and switch between themes.
 
 ### Using the Theme Provider
 
@@ -508,7 +547,7 @@ function CustomComponent() {
 
 ### Default Themes
 
-QuadCn comes with two default themes:
+quadcn comes with two default themes:
 
 1. **Light Theme** - Clean, accessible light mode with subtle shadows
 2. **Dark Theme** - Carefully calibrated dark mode with proper contrast ratios

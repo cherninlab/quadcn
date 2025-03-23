@@ -1,29 +1,33 @@
 {
-  "name": "@quadcn/components",
-  "version": "0.1.0",
-  "description": "React components for the QuadCn 4px grid system",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "sideEffects": false,
-  "type": "module",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {},
-  "dependencies": {
-    "@quadcn/core": "workspace:*"
-  },
-  "devDependencies": {}
+	"name": "@quadcn/components",
+	"version": "0.2.0",
+	"description": "React components for the QuadCn 4px grid system",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		}
+	},
+	"files": ["dist"],
+	"sideEffects": false,
+	"type": "module",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"lint": "biome check --write --unsafe .",
+		"lint:ci": "biome check --unsafe .",
+		"prepublishOnly": "npm run build"
+	},
+	"dependencies": {
+		"@quadcn/core": "workspace:*"
+	},
+	"devDependencies": {}
 }

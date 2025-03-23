@@ -4,8 +4,8 @@ import { lightTheme } from "./light";
 
 // Initialize theme registry with default themes
 const themeRegistry: Record<string, BaseTheme> = {
-  light: lightTheme,
-  dark: darkTheme,
+	light: lightTheme,
+	dark: darkTheme,
 };
 
 /**
@@ -14,7 +14,7 @@ const themeRegistry: Record<string, BaseTheme> = {
  * @param theme Theme object
  */
 export function registerTheme(name: string, theme: BaseTheme): void {
-  themeRegistry[name] = theme;
+	themeRegistry[name] = theme;
 }
 
 /**
@@ -23,7 +23,7 @@ export function registerTheme(name: string, theme: BaseTheme): void {
  * @returns Theme object or undefined if not found
  */
 export function getTheme(name: string): BaseTheme | undefined {
-  return themeRegistry[name];
+	return themeRegistry[name];
 }
 
 /**
@@ -31,5 +31,5 @@ export function getTheme(name: string): BaseTheme | undefined {
  * @returns Record of all themes
  */
 export function getAllThemes(): Record<string, BaseTheme> {
-  return { ...themeRegistry };
+	return { ...themeRegistry };
 }

@@ -5,7 +5,7 @@ The foundation of the QuadCn design system, providing design tokens and grid uti
 ## Installation
 
 ```bash
-npm install @quadcn/core
+pnpm install @quadcn/core
 ```
 
 ## Usage
@@ -85,7 +85,7 @@ console.log(GRID_UNIT); // 4 (px)
 
 ### Mathematical Foundation
 
-The entire QuadCn system is built on a single principle: **every measurement must be a multiple of 4px**. This creates a consistent visual rhythm and perfect alignment throughout your interface.
+The entire quadcn system is built on a single principle: **every measurement must be a multiple of 4px**. This creates a consistent visual rhythm and perfect alignment throughout your interface.
 
 ```
 ┌────┬────┬────┬────┬────┬────┬────┬────┐

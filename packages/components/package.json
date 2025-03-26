@@ -8,8 +8,8 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.js"
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
 		}
 	},
 	"files": ["dist"],
@@ -22,8 +22,9 @@
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
-		"lint": "biome check --write --unsafe .",
-		"lint:ci": "biome check --unsafe .",
+		"lint": "biome check --write .",
+		"lint:ci": "biome check .",
+		"format": "biome format --write .",
 		"prepublishOnly": "npm run build"
 	},
 	"dependencies": {

@@ -6,11 +6,11 @@ export default defineConfig({
 	dts: {
 		resolve: true,
 		compilerOptions: {
-			jsx: "react-jsx", 
+			jsx: "react-jsx",
 			jsxImportSource: "react",
 			moduleResolution: "node",
-			allowSyntheticDefaultImports: true
-		}
+			allowSyntheticDefaultImports: true,
+		},
 	},
 	clean: true,
 	external: ["react", "react-dom", "@quadcn/core"],
@@ -20,5 +20,5 @@ export default defineConfig({
 	splitting: true,
 	esbuildOptions(options) {
 		options.jsx = "automatic";
-	}
+	},
 });

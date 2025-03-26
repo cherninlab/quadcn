@@ -39,8 +39,8 @@ export const Text: React.FC<TextProps> = ({
 	}[variant];
 
 	// Use provided values or defaults from variant
-	const finalSize = size || variantDefaults.size;
-	const finalWeight = weight || variantDefaults.weight;
+	const finalSize = size ?? variantDefaults.size;
+	const finalWeight = weight ?? variantDefaults.weight;
 
 	// Build class names
 	const classes = [

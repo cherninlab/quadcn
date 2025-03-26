@@ -1,6 +1,6 @@
 <div align="center">
   <h1>quadcn</h1>
-  <p><strong>The 4px grid system. Open Source.</strong></p>
+  <p><strong>The 4px grid system.</strong></p>
   
   [![Version](https://img.shields.io/npm/v/@quadcn/core.svg)](https://www.npmjs.com/package/@quadcn/core)
   [![Bundle Size](https://img.shields.io/bundlephobia/minzip/@quadcn/core)](https://bundlephobia.com/package/@quadcn/core)
